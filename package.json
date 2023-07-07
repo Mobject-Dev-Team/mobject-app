@@ -1,0 +1,42 @@
+{
+    "name": "mobject-app",
+    "version": "0.0.1",
+    "description": "Core mobject app for non-realtime extensions",
+    "main": "main.js",
+    "scripts": {
+        "start": "set NODE_ENV=development && electron .",
+        "build": "set NODE_ENV=production&& electron-builder",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "author": "mobject dev team",
+    "license": "MIT",
+    "build": {
+        "appId": "org.mobject.app",
+        "files": [
+          "**/*",
+          "!extensions/**/*"
+        ],
+        "extraResources": [
+            {
+                "from": "./assets",
+                "to": "assets",
+                "filter": [
+                    "**/*.{png,jpg,jpeg,gif}"
+                ]
+            }
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ]
+        }
+    },
+    "dependencies": {
+        "ads-server": "^1.1.2"
+    },
+    "devDependencies": {
+        "electron": "^25.2.0",
+        "electron-builder": "^24.4.0",
+        "electron-reload": "^2.0.0-alpha.1"
+    }
+}
