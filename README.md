@@ -16,7 +16,7 @@ In addition to managing the lifecycle of the extensions and the ADS server, Mobj
 
 ## Installation
 
-Before you start the installation process, make sure that Node.js and npm are installed on your system. You can download them here.
+Before you start the installation process, make sure that Node.js and npm are installed on your system.
 
 ```bash
 # Clone the repository
@@ -27,11 +27,13 @@ cd mobject-app
 npm install
 ```
 
-## Developing
+# Developing
 
-It is best to open the folder using vscode and pressing run from there. Alternatively you can use the npm start.
+We recommend utilizing Visual Studio Code (VS Code) for an optimal development experience. With pre-configured launch settings, it is as easy as opening the project folder in VS Code and clicking on the 'Run' command.
 
-Remember, when running this way your extensions must be placed in the extensions folder.
+You can also initiate the application by executing 'npm start' in the command line interface.
+
+Please note, when utilizing these methods, ensure to place your extensions within the 'extensions' directory of this folder.
 
 ```bash
 # Starting the app
@@ -40,12 +42,12 @@ npm start
 
 ## Building the app
 
-If you wish to build the app so that it runs as an executable, use the following command. The build files will be in the dist folder.
+To compile the application into a standalone executable, execute the following command. This process generates build files which can be found in the 'dist' directory.
 
-Remember, when running this way your extensions must be placed in the %AppData%\mobject-app\extensions folder.
+Ensure that when running the compiled application, your extensions are positioned in the '%AppData%\mobject-app\extensions' directory.
 
 ```bash
-# Build the app
+# Command to build the application
 npm run build
 ```
 
