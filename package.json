@@ -13,8 +13,8 @@
     "build": {
         "appId": "org.mobject.app",
         "files": [
-          "**/*",
-          "!extensions/**/*"
+            "**/*",
+            "!extensions/**/*"
         ],
         "extraResources": [
             {
@@ -25,7 +25,11 @@
                 ]
             }
         ],
+        "directories": {
+            "buildResources": "build"
+        },
         "win": {
+            "icon": "build/icon.ico",
             "target": [
                 "nsis"
             ]
