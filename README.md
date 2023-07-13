@@ -31,6 +31,28 @@ npm install
 
 We recommend utilizing Visual Studio Code (VS Code) for an optimal development experience. With pre-configured launch settings, it is as easy as opening the project folder in VS Code and clicking on the 'Run' command.
 
+To enable this, simply add a folder called .vscode and create a launch.json with the following content.
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Main Process",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+      },
+      "args" : ["."],
+      "outputCapture": "std"
+    }
+  ]
+}
+```
+
 You can also initiate the application by executing 'npm start' in the command line interface.
 
 Please note, when utilizing these methods, ensure to place your extensions within the 'extensions' directory of this folder.
